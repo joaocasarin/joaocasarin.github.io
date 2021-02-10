@@ -1,0 +1,165 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap'); /* google-fonts */
+
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/* HEADER STYLES - BEGINNING */
+.header {
+  background-color: #7C5E99;
+  width: 100vw;
+  height: 80px;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  padding: 0 20px;
+  transition: 0.8s;
+}
+
+.logo:hover {
+  transform: rotate(720deg);
+}
+
+.logo a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Fira Code', monospace;
+  font-size: 20px;
+  transition: all 0.3s ease 0s;
+}
+
+.logo a:hover {
+  color: black;
+}
+
+.logo a img {
+  vertical-align: middle;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav-links {
+  color: white;
+  margin: auto 0;
+}
+
+.nav-links li {
+  display: inline-block;
+  padding: 0 30px 0 0;
+}
+
+/* show the list style, and make the bullet become a red square */
+.nav-links li::before {
+  content:'\ffed';
+  color: red;
+  margin-right: 10px;
+}
+
+.nav-links li a {
+  color: inherit;
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+  font-family: 'Fira Code', monospace;
+  font-size: 20px;
+}
+
+.nav-links li a:hover {
+  color: black;
+}
+
+.download-cv {
+  height: 60px;
+  width: 170px;
+  background-color: #F25A70;
+  margin-right: 20px;
+  color: white;
+  font-family: 'Fira Code', monospace;
+  font-size: 20px;
+  box-shadow: 5px 5px black;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  border: none;
+  outline:none;
+}
+
+.download-cv:hover {
+  background-color: #3e8e41
+}
+
+.download-cv:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  margin-right: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Responsive navbar with hamburger button */
+@media (max-width: 1000px) {
+  .nav {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  .logo {
+    margin-right: auto;
+  }
+}
+
+/* HEADER STYLES - END */
+
+
+/* BODY STYLES - BEGINNING */
+.body {
+  background-color: black;
+  width: 100vw;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+/* BODY STYLES - END */
+
+
+/* FOOTER STYLES - BEGINNING */
+.footer {
+  background-color: darkgray;
+  width: 100vw;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+
+.copyright {
+  font-size: small;
+  color: white;
+}
+
+.copyright a {
+  color: inherit;
+  transition: all 0.3s ease 0s;
+}
+
+.copyright a:hover {
+  color: blueviolet;
+}
+/* FOOTER STYLES - END */
