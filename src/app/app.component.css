@@ -20,11 +20,6 @@
 
 .logo {
   padding: 0 20px;
-  transition: 0.8s;
-}
-
-.logo:hover {
-  transform: rotate(720deg);
 }
 
 .logo a {
@@ -39,8 +34,8 @@
   color: black;
 }
 
-.logo a img {
-  vertical-align: middle;
+.logo a h3 {
+  font-family: 'Press Start 2P', cursive;
 }
 
 .nav {
@@ -108,12 +103,13 @@
 }
 
 /* Responsive navbar with hamburger button */
-@media (max-width: 1000px) {
+@media (max-width: 1050px) {
   .nav {
     display: none;
   }
   .hamburger {
     display: block;
+    margin-left: 20px;
   }
   .logo {
     margin-right: auto;
@@ -124,12 +120,11 @@
 
 
 /* BODY STYLES - BEGINNING */
-.body {
+.content {
   width: 100vw;
   flex-grow: 1;
   display: flex;
   flex-direction: row;
-  background-image: url('../assets/bg.jpg');
   background-size: contain;
   background-position: center;
 }

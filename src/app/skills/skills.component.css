@@ -3,8 +3,9 @@
 .wrapper {
   background-color: #F25A70;
   width: 100vw;
-  height: calc(100vh - 80px - 50px);
-  padding-top: 50px; /* BUG PROGRESS BAR */
+  position: relative;
+  min-height: 100%;
+  padding: 50px 0 100px; /* BUG PROGRESS BAR */
   display: flex;
   flex-direction: column;
   align-items: center;
