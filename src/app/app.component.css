@@ -86,7 +86,7 @@
   font-size: 20px;
   box-shadow: 5px 5px black;
   cursor: pointer;
-  transition-duration: 0.4s;
+  transition: transform 100ms cubic-bezier(.45,.97,.68,2.48);
   border: none;
   outline:none;
 }
@@ -97,7 +97,7 @@
 
 .download-cv:active {
   background-color: #3e8e41;
-  box-shadow: 0 5px #666;
+  box-shadow: 0 0 black;
   transform: translateY(4px);
 }
 
@@ -105,10 +105,6 @@
   display: none;
   cursor: pointer;
   margin-right: auto;
-}
-
-.hidden {
-  display: none;
 }
 
 /* Responsive navbar with hamburger button */
@@ -129,11 +125,13 @@
 
 /* BODY STYLES - BEGINNING */
 .body {
-  background-color: black;
   width: 100vw;
   flex-grow: 1;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  background-image: url('../assets/bg.jpg');
+  background-size: contain;
+  background-position: center;
 }
 /* BODY STYLES - END */
 

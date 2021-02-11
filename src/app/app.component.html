@@ -1,58 +1,37 @@
 <div class="wrapper">
-  <header>
-    <div class="header">
-      <div class="hamburger">
-        <button mat-icon-button color="black" (click)="openSlideMenu()">
-          <mat-icon>menu</mat-icon>
-        </button>
-      </div>
+  <header class="header">
+      <button class="hamburger" mat-icon-button color="black">
+        <mat-icon>menu</mat-icon>
+      </button>
 
       <div class="logo">
-        <a href="#">
+        <a href="/">
           <img src="../assets/cromada.svg" height="60px" alt="Logo">
         </a>
       </div>
 
       <div class="nav">
         <ul class="nav-links">
-          <li><a href="#">Skills</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">About me</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a routerLink="skills">Skills</a></li>
+          <li><a routerLink="projects">Projects</a></li>
+          <li><a routerLink="about-me">About me</a></li>
+          <li><a routerLink="contact">Contact</a></li>
         </ul>
 
         <button class="download-cv">
           Download CV
         </button>
       </div>
-    </div>
   </header>
 
-  <div id="menu" [ngClass]="{
-    'hidden': show === true
-  }">
-    <button mat-icon-button color="black" (click)="closeSlideMenu()">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <ul class="nav-links">
-      <li><a href="#">Skills</a></li>
-      <li><a href="#">Projects</a></li>
-      <li><a href="#">About me</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
+  <div class="body">
+    <router-outlet></router-outlet>
   </div>
 
-  <div class="body" id="body" style="color: white;">
-    <img style="margin: 20px auto;" src="../assets/cromada.svg" width="1200px" alt="">
-    <img style="margin: 20px auto;" src="../assets/cromada.svg" width="1200px" alt="">
-  </div>
-
-  <footer>
-    <div class="footer">
-      <span class="copyright">
-        &copy; 2021 <a target="_blank" href="https://github.com/joaocasarin">@joaocasarin</a> All Rights Reserved
-      </span>
-    </div>
+  <footer class="footer">
+    <p class="copyright">
+      &copy; 2021 <a target="_blank" href="https://github.com/marcobrunolive">@marcobrunolive</a> /
+        <a target="_blank" href="https://github.com/joaocasarin">@joaocasarin</a> All Rights Reserved
+    </p>
   </footer>
-
 </div>

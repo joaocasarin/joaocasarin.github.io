@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 116px 0 0 91px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.banner {
+  width: 627px;
+  height: 184px;
+  background-color: #3A4042;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 8px 8px black;
+  margin-bottom: 38px;
+}
+
+.name {
+  margin: 42px 0 28px 0;
+  color: #F25A70;
+  font-size: 40px;
+}
+
+.title {
+  color: white;
+  font-size: 30px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.buttons > * {
+  margin: 0 56px;
+}
+
+.download-cv, .btn-contact {
+  height: 60px;
+  width: 170px;
+  background-color: #F25A70;
+  margin-right: 20px;
+  color: white;
+  font-family: 'Fira Code', monospace;
+  font-size: 20px;
+  box-shadow: 5px 5px black;
+  cursor: pointer;
+  transition: transform 100ms cubic-bezier(.45,.97,.68,2.48);
+  border: none;
+  outline:none;
+}
+
+.download-cv:hover, .btn-contact:hover {
+  background-color: #3e8e41
+}
+
+.download-cv:active, .btn-contact:active {
+  background-color: #3e8e41;
+  box-shadow: 0 0 black;
+  transform: translateY(4px);
+}
+

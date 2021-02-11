@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.wrapper {
+  background-color: #F25A70;
+  width: 100vw;
+  height: calc(100vh - 80px - 50px);
+  padding-top: 50px; /* BUG PROGRESS BAR */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+}
+
+.title {
+  font-size: 40px;
+}
+
+.skills-tec {
+  display: flex;
+  align-self: center;
+  margin-top: 60px;
+  font-family: 'Press Start 2P', sans-serif;
+  font-size: 25px;
+  color: #FFF;
+}
+
+.skills-tec .icon {
+  margin-right: 25px;
+  height: 90px;
+}
+
+.skills-tec .icon-rest {
+  margin-right: 25px;
+  height: 54px;
+}
+
+.skills-tec .skill-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.progress-bar {
+  box-sizing: border-box;
+  background-color: #FFF;
+  border: 5px solid #000;
+  height: 40px;
+}
+
+.progress-bar::-webkit-progress-value {
+  background: #7C5E99;
+}
+
+.progress-bar::-webkit-progress-bar {
+  background-color: white;
+}
