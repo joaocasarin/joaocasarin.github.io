@@ -1,5 +1,5 @@
 /* IMPORTS */
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap'); /* google-fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 .wrapper {
   display: flex;
@@ -25,7 +25,6 @@
 .logo a {
   color: white;
   text-decoration: none;
-  font-family: 'Fira Code', monospace;
   font-size: 20px;
   transition: all 0.3s ease 0s;
 }
@@ -63,7 +62,6 @@
   color: inherit;
   transition: all 0.3s ease 0s;
   text-decoration: none;
-  font-family: 'Fira Code', monospace;
   font-size: 20px;
 }
 
@@ -74,26 +72,8 @@
 .download-cv {
   height: 60px;
   width: 170px;
-  background-color: #F25A70;
   margin-right: 20px;
-  color: white;
-  font-family: 'Fira Code', monospace;
   font-size: 20px;
-  box-shadow: 5px 5px black;
-  cursor: pointer;
-  transition: transform 100ms cubic-bezier(.45,.97,.68,2.48);
-  border: none;
-  outline: none;
-}
-
-.download-cv:hover {
-  background-color: #3e8e41
-}
-
-.download-cv:active {
-  background-color: #3e8e41;
-  box-shadow: 0 0 black;
-  transform: translateY(4px);
 }
 
 .hamburger {
@@ -143,6 +123,7 @@
 .copyright {
   font-size: small;
   color: white;
+  font-family: 'Roboto', sans-serif;
 }
 
 .copyright a {

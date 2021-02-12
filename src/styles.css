@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+/* font-family: 'Press Start 2P', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap');
+/* font-family: 'Fira Code', monospace; */
 
 * {
   margin: 0;
@@ -6,5 +10,37 @@
   box-sizing: border-box;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Fira Code', monospace;
+}
+
+.play-button {
+  font-family: 'Fira Code', monospace;
+  color: white;
+  background-color: #F25A70;
+  box-shadow: 5px 5px black;
+  cursor: pointer;
+  transition: transform 100ms cubic-bezier(.45,.97,.68,2.48);
+  border: none;
+  outline: none;
+}
+
+button:hover {
+  background-color: #3e8e41
+}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 0 black;
+  transform: translateY(4px);
+}
+
+.title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 40px;
+  color: white;
+}
