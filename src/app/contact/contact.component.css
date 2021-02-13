@@ -17,23 +17,41 @@
   font-size: 30px;
 }
 
-.contact-form input, .contact-form textarea {
+label, button {
+  margin-top: 20px;
+}
+
+.contact-form > input {
   border: 5px solid black;
   height: 50px;
   width: 80vw;
   font-size: 30px;
-  margin-bottom: 20px;
   outline: none;
   resize: none;
-  justify-content: center;
 }
 
-.contact-form #msg {
-  height: 120px;
+.contact-form > textarea {
+  border: 5px solid black;
+  width: 80vw;
+  min-height: 50px;
+  font-size: 30px;
+  outline: none;
+  resize: vertical;
 }
 
 .contact-form button {
   height: 60px;
   font-size: 20px;
   margin-bottom: 50px;
+}
+
+.is-error {
+  font-size: 15px;
+  background-color: crimson;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+
+.invalid-btn:hover {
+  background-color: red;
 }

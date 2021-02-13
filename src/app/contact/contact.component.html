@@ -1,16 +1,52 @@
 <section class="wrapper">
   <h2 class="title">Contact</h2>
 
-  <article class="contact-form">
-    <label class="name" for="name">Name</label>
-    <input type="text" id="name">
+  <form (ngSubmit)="submitContact()" #contactForm="ngForm">
+    <article class="contact-form">
+      <label class="name" for="name">Name</label>
+      <input
+       type="text"
+       name="name"
+       [(ngModel)]="name"
+       #nameInput="ngModel"
+       required>
 
-    <label class="mail" for="mail">E-mail</label>
-    <input type="email" id="mail">
+       <div class="is-error" *ngIf="nameInput.invalid && nameInput.touched">
+         Please enter your name.
+       </div>
 
-    <label class="msg" for="msg">Message</label>
-    <textarea name="msg" id="msg" cols="30" rows="1"></textarea>
+      <label class="mail" for="mail">E-mail</label>
+      <input
+       type="email"
+       name="email"
+       [(ngModel)]="email"
+       #emailInput="ngModel"
+       required>
 
-    <button class="play-button" type="submit">Send</button>
-  </article>
+       <div class="is-error" *ngIf="emailInput.invalid && emailInput.touched">
+        Please enter your e-mail.
+      </div>
+
+      <label class="msg" for="msg">Message</label>
+      <textarea
+       name="msg"
+       rows="5"
+       name="message"
+       [(ngModel)]="message"
+       #messageInput="ngModel"
+       required></textarea>
+
+       <div class="is-error" *ngIf="messageInput.invalid && messageInput.touched">
+        Please enter your message.
+      </div>
+
+      <button
+       class="play-button"
+       type="submit"
+       [disabled]="contactForm.invalid"
+       [ngClass]="{
+         'invalid-btn': contactForm.invalid
+        }">Send</button>
+    </article>
+  </form>
 </section>

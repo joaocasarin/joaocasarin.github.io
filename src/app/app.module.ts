@@ -11,6 +11,8 @@ import { MatSidenavModule } from "@angular/material/sidenav";
 import { SkillsComponent } from './skills/skills.component';
 import { ContactComponent } from './contact/contact.component';
 
+import { FormsModule } from "@angular/forms";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,8 @@ import { ContactComponent } from './contact/contact.component';
     BrowserAnimationsModule,
     MatButtonModule,
     MatIconModule,
-    MatSidenavModule
+    MatSidenavModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -29,11 +29,11 @@ body {
   outline: none;
 }
 
-button:hover {
+.play-button:hover {
   background-color: #3e8e41
 }
 
-button:active {
+.play-button:active {
   background-color: #3e8e41;
   box-shadow: 0 0 black;
   transform: translateY(4px);

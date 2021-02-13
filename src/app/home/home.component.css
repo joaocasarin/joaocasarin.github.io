@@ -18,6 +18,52 @@
   margin-bottom: 38px;
 }
 
+/* resize banner when screen < 750px */
+@media (max-width: 750px) {
+  .banner {
+    width: 500px;
+  }
+  .banner > .name {
+    font-size: 35px;
+  }
+  .banner > .title {
+    padding-top: 1rem;
+    font-size: 20px;
+  }
+}
+
+/* resize banner and relocate buttons when screen < 550px */
+@media (max-width: 563px) {
+  .banner {
+    width: 400px;
+  }
+  .banner > .name {
+    font-size: 30px;
+  }
+  .banner > .title {
+    padding-top: 1rem;
+    font-size: 17px;
+  }
+  .buttons > .play-button:first-child {
+    margin-bottom: 20px;
+  }
+}
+
+/* resize banner when screen < 415px */
+@media (max-width: 415px) {
+  .banner {
+    width: 300px;
+    height: 150px;
+  }
+  .banner > .name {
+    font-size: 22px;
+  }
+  .banner > .title {
+    padding-top: 1rem;
+    font-size: 14px;
+  }
+}
+
 .name {
   font-family: 'Press Start 2P', cursive;
   margin: 42px 0 28px 0;
@@ -32,13 +78,15 @@
 .buttons {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .buttons > * {
   margin: 0 56px;
 }
 
-.download-cv, .contact {
+.play-button {
   height: 60px;
   width: 170px;
   margin-right: 20px;
