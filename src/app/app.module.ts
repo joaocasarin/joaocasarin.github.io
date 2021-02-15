@@ -12,13 +12,17 @@ import { SkillsComponent } from './skills/skills.component';
 import { ContactComponent } from './contact/contact.component';
 
 import { FormsModule } from "@angular/forms";
+import { ProjectsComponent } from './projects/projects.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SkillsComponent,
-    ContactComponent
+    ContactComponent,
+    ProjectsComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

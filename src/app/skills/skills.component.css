@@ -1,9 +1,9 @@
-.wrapper {
+/* .wrapper {
   background-color: #F25A70;
   width: 100vw;
   position: relative;
   min-height: calc(100vh - 80px - 50px);
-  padding: 50px 0 100px; /* BUG PROGRESS BAR */
+  padding: 50px 0 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -103,4 +103,102 @@
 
 .progress-bar::-webkit-progress-bar {
   background-color: white;
+}
+ */
+
+.wrapper {
+  background-color: #3A4042;
+  width: 100vw;
+  position: relative;
+  min-height: calc(100vh - 80px - 50px);
+  padding: 50px 0 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills-wrapper {
+  margin: 62px 0 0 0;
+  width: 900px;
+  max-width: 900px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+.skill:nth-child(odd) {
+  margin-right: 100px;
+}
+
+.skill-progress {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-title {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.progress-bar {
+  border: 5px solid black;
+  width: 250px;
+  height: 40px;
+}
+
+.progress-bar::-webkit-progress-value {
+  background: #4070C2;
+}
+
+.progress-bar::-webkit-progress-bar {
+  background-color: white;
+}
+
+@media (max-width: 950px) {
+  .skills-wrapper {
+    width: 800px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .skill:nth-child(odd) {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .skills-wrapper {
+    width: 700px;
+  }
+}
+
+@media (max-width: 700px) {
+  .skills-wrapper {
+    width: 500px;
+  }
+}
+
+@media (max-width: 500px) {
+  .skills-wrapper {
+    width: 370px;
+  }
+}
+
+@media (max-width: 400px) {
+  .skills-wrapper {
+    width: 350px;
+  }
+  .progress-bar {
+    width: 200px;
+  }
+  .skill-title {
+    font-size: 18px;
+  }
 }

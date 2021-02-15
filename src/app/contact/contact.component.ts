@@ -16,6 +16,6 @@ export class ContactComponent implements OnInit {
   }
 
   submitContact() {
-    window.alert(`Hi, my name is ${this.name}, and you can send me '${this.message}' using my e-mail ${this.email}.`)
+    console.log(`Hi, my name is ${this.name}, and you can send me '${this.message}' using my e-mail ${this.email}.`)
   }
 }

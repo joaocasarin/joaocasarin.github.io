@@ -1,0 +1,30 @@
+.wrapper {
+  background-color: #3A4042;
+  width: 100vw;
+  position: relative;
+  min-height: calc(100vh - 80px - 50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.title {
+  margin-bottom: 50px;
+}
+
+.projects {
+  max-width: 960px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+}
+
+.project {
+  background-color: #2F6080;
+  height: 280px;
+  width: 280px;
+  margin: 20px;
+  box-shadow: 10px 10px white;
+}

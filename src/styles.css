@@ -21,7 +21,7 @@ body {
 .play-button {
   font-family: 'Fira Code', monospace;
   color: white;
-  background-color: #F25A70;
+  background-color: #4070C2;
   box-shadow: 5px 5px black;
   cursor: pointer;
   transition: transform 100ms cubic-bezier(.45,.97,.68,2.48);
@@ -30,7 +30,7 @@ body {
 }
 
 .play-button:hover {
-  background-color: #3e8e41
+  background-color: #4AC286;
 }
 
 .play-button:active {

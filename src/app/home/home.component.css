@@ -1,5 +1,6 @@
 .wrapper {
-  background-color: #5793a7;
+  background-color: #87C7BA;
+  position: relative;
   min-height: calc(100vh - 80px - 50px);
   display: flex;
   flex-direction: column;
@@ -9,7 +10,7 @@
 
 .banner {
   width: 627px;
-  height: 184px;
+  height: 160px;
   background-color: #3A4042;
   display: flex;
   flex-direction: column;
@@ -18,61 +19,15 @@
   margin-bottom: 38px;
 }
 
-/* resize banner when screen < 750px */
-@media (max-width: 750px) {
-  .banner {
-    width: 500px;
-  }
-  .banner > .name {
-    font-size: 35px;
-  }
-  .banner > .title {
-    padding-top: 1rem;
-    font-size: 20px;
-  }
-}
-
-/* resize banner and relocate buttons when screen < 550px */
-@media (max-width: 563px) {
-  .banner {
-    width: 400px;
-  }
-  .banner > .name {
-    font-size: 30px;
-  }
-  .banner > .title {
-    padding-top: 1rem;
-    font-size: 17px;
-  }
-  .buttons > .play-button:first-child {
-    margin-bottom: 20px;
-  }
-}
-
-/* resize banner when screen < 415px */
-@media (max-width: 415px) {
-  .banner {
-    width: 300px;
-    height: 150px;
-  }
-  .banner > .name {
-    font-size: 22px;
-  }
-  .banner > .title {
-    padding-top: 1rem;
-    font-size: 14px;
-  }
-}
-
 .name {
   font-family: 'Press Start 2P', cursive;
   margin: 42px 0 28px 0;
-  color: #F25A70;
+  color: #4070C2;
   font-size: 40px;
 }
 
 .title {
-  font-size: 30px;
+  font-size: 18px;
 }
 
 .buttons {
@@ -91,4 +46,49 @@
   width: 170px;
   margin-right: 20px;
   font-size: 20px;
+}
+
+/* resize banner when screen < 750px */
+@media (max-width: 750px) {
+  .banner {
+    width: 500px;
+    height: 150px;
+  }
+  .banner > .name {
+    font-size: 35px;
+  }
+  .banner > .title {
+    font-size: 14px;
+  }
+}
+
+/* resize banner and relocate buttons when screen < 550px */
+@media (max-width: 563px) {
+  .banner {
+    width: 400px;
+    height: 140px;
+  }
+  .banner > .name {
+    font-size: 30px;
+  }
+  .banner > .title {
+    font-size: 12px;
+  }
+  .buttons > .play-button:first-child {
+    margin-bottom: 20px;
+  }
+}
+
+/* resize banner when screen < 415px */
+@media (max-width: 415px) {
+  .banner {
+    width: 300px;
+    height: 130px;
+  }
+  .banner > .name {
+    font-size: 22px;
+  }
+  .banner > .title {
+    font-size: 12px;
+  }
 }

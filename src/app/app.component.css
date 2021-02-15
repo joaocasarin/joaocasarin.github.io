@@ -3,13 +3,14 @@
 
 .wrapper {
   display: flex;
+  width: 100vw;
   min-height: 100vh;
   flex-direction: column;
 }
 
 /* HEADER STYLES - BEGINNING */
 .header {
-  background-color: #7C5E99;
+  background-color: #2F6080;
   width: 100vw;
   height: 80px;
   margin: 0;
@@ -19,32 +20,53 @@
 }
 
 .logo {
-  padding: 0 20px;
-}
-
-.logo a {
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-  transition: all 0.3s ease 0s;
-}
-
-/* resize logo font-size when screen < 380px */
-@media (max-width: 380px) {
-  .logo a {
-    font-size: 18px;
-  }
-}
-
-.logo a:hover {
-  color: black;
-}
-
-.logo a h3 {
+  margin-left: 30px;
   font-family: 'Press Start 2P', cursive;
+  background-color: #87C7BA;
+  width: 60px;
+  height: 60px;
+  box-shadow: 5px 5px black;
+  transition: 100ms cubic-bezier(.45,.97,.68,2.48);
+  text-align: center;
+  vertical-align: middle;
+  line-height: 60px;
+  cursor: pointer;
+  outline: none;
 }
 
-.nav {
+.logo:hover {
+  transform: scale(1.08);
+  /* transform: rotate(720deg); */
+}
+
+.logo:active {
+  box-shadow: 0 0 black;
+  transform: translateY(4px);
+}
+
+nav {
+  height: 100%;
+  vertical-align: middle;
+  line-height: 80px;
+}
+
+nav > a {
+  text-decoration: none;
+  color: white;
+  padding: 30px 40px;
+}
+
+nav a::before {
+  content:'\ffed';
+  color: red;
+  margin-right: 10px;
+}
+
+nav > a:hover {
+  background-color: rgba(0,0,0,0.1);
+}
+
+/* nav {
   display: flex;
 }
 
@@ -56,10 +78,10 @@
 .nav-links li {
   display: inline-block;
   padding: 0 30px 0 0;
-}
+} */
 
 /* show the list style, and make the bullet become a red square */
-.nav-links li::before {
+/* .nav-links li::before {
   content:'\ffed';
   color: red;
   margin-right: 10px;
@@ -74,12 +96,12 @@
 
 .nav-links li a:hover {
   color: black;
-}
+} */
 
-.download-cv {
+.play-button {
   height: 60px;
   width: 170px;
-  margin-right: 20px;
+  margin: auto 20px auto 30px;
   font-size: 20px;
 }
 
@@ -87,20 +109,6 @@
   display: none;
   cursor: pointer;
   margin-right: auto;
-}
-
-/* Responsive navbar with hamburger button */
-@media (max-width: 1050px) {
-  .nav {
-    display: none;
-  }
-  .hamburger {
-    display: block;
-    margin-left: 20px;
-  }
-  .logo {
-    margin-right: auto;
-  }
 }
 
 /* HEADER STYLES - END */
@@ -142,3 +150,17 @@
   color: blueviolet;
 }
 /* FOOTER STYLES - END */
+
+/* Responsive navbar with hamburger button */
+@media (max-width: 1145px) {
+  nav {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+    margin-left: 20px;
+  }
+  .logo {
+    margin-right: auto;
+  }
+}

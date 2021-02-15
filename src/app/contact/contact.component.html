@@ -3,42 +3,41 @@
 
   <form (ngSubmit)="submitContact()" #contactForm="ngForm">
     <article class="contact-form">
-      <label class="name" for="name">Name</label>
+      <label for="name">Name</label>
       <input
+       class="contact-input"
        type="text"
        name="name"
        [(ngModel)]="name"
        #nameInput="ngModel"
-       required>
+       [ngClass]="{
+         'err': nameInput.invalid && nameInput.touched
+        }"
+       placeholder="João Vitor Casarin"
+       required
+       autofocus>
 
-       <div class="is-error" *ngIf="nameInput.invalid && nameInput.touched">
-         Please enter your name.
-       </div>
-
-      <label class="mail" for="mail">E-mail</label>
+      <label for="mail">E-mail</label>
       <input
+       class="contact-input"
        type="email"
        name="email"
        [(ngModel)]="email"
        #emailInput="ngModel"
+       placeholder="joaocasarin@example.com"
+       email
        required>
 
-       <div class="is-error" *ngIf="emailInput.invalid && emailInput.touched">
-        Please enter your e-mail.
-      </div>
-
-      <label class="msg" for="msg">Message</label>
+      <label for="msg">Message</label>
       <textarea
+       class="contact-input"
        name="msg"
        rows="5"
        name="message"
        [(ngModel)]="message"
        #messageInput="ngModel"
+       placeholder="Tell me what's in your mind..."
        required></textarea>
-
-       <div class="is-error" *ngIf="messageInput.invalid && messageInput.touched">
-        Please enter your message.
-      </div>
 
       <button
        class="play-button"

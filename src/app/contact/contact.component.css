@@ -21,22 +21,22 @@ label, button {
   margin-top: 20px;
 }
 
-.contact-form > input {
+.contact-form > .contact-input {
   border: 5px solid black;
-  height: 50px;
   width: 80vw;
   font-size: 30px;
   outline: none;
-  resize: none;
+}
+
+.contact-form > input {
+  height: 50px;
+  padding: 0 5px;
 }
 
 .contact-form > textarea {
-  border: 5px solid black;
-  width: 80vw;
-  min-height: 50px;
-  font-size: 30px;
-  outline: none;
   resize: vertical;
+  padding-left: 5px;
+  padding-top: 4px;
 }
 
 .contact-form button {
@@ -53,5 +53,15 @@ label, button {
 }
 
 .invalid-btn:hover {
-  background-color: red;
+  cursor: not-allowed;
+  background-color: #7A1E01;
+}
+
+/* .err {
+  border: solid 5px red;
+} */
+
+.contact-form > input:invalid,
+.contact-form > textarea:invalid {
+  border: solid 5px red;
 }
