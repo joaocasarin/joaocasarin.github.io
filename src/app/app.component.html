@@ -1,20 +1,23 @@
 <mat-sidenav-container>
-  <mat-sidenav mode="over" [opened]="opened">
+  <mat-sidenav mode="over" #sidenav>
     <div class="side-header">
-      <button class="close" mat-icon-button color="black" (click)="sidenav()">
+      <button class="close" mat-icon-button color="black" (click)="sidenav.toggle()">
         <mat-icon>close</mat-icon>
       </button>
     </div>
-    <a class="sidenav-a" routerLink="" (click)="sidenav()">Home</a>
-    <a class="sidenav-a" routerLink="skills" (click)="sidenav()">Skills</a>
-    <a class="sidenav-a" routerLink="projects" (click)="sidenav()">Projects</a>
-    <a class="sidenav-a" routerLink="about-me" (click)="sidenav()">About me</a>
-    <a class="sidenav-a" routerLink="contact" (click)="sidenav()">Contact</a>
+
+    <a class="sidenav-a" routerLink="" (click)="sidenav.toggle()">Home</a>
+    <a class="sidenav-a" routerLink="skills" (click)="sidenav.toggle()">Skills</a>
+    <a class="sidenav-a" routerLink="projects" (click)="sidenav.toggle()">Projects</a>
+    <a class="sidenav-a" routerLink="about-me" (click)="sidenav.toggle()">About me</a>
+    <a class="sidenav-a" routerLink="contact" (click)="sidenav.toggle()">Contact</a>
+
+    <button class="play-button">Download CV</button>
   </mat-sidenav>
   <mat-sidenav-content>
     <div class="wrapper">
       <header class="header">
-          <button class="hamburger" mat-icon-button color="black" (click)="sidenav()">
+          <button class="hamburger" mat-icon-button color="black" (click)="sidenav.toggle()">
             <mat-icon>menu</mat-icon>
           </button>
 
