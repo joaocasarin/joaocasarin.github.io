@@ -1,5 +1,4 @@
 .wrapper {
-  background-color: #3A4042;
   width: 100vw;
   position: relative;
   min-height: calc(100vh - 80px - 50px);
@@ -11,12 +10,11 @@
 
 .title {
   margin-bottom: 60px;
+  color: #3A4042;
 }
 
 .text-wrapper {
   width: 1280px;
-}
-
-.text-wrapper > p {
-  font-size: 30px;
+  display: flex;
+  justify-content: center;
 }

@@ -1,5 +1,4 @@
 .wrapper {
-  background-color: #3A4042;
   width: 100vw;
   position: relative;
   min-height: calc(100vh - 80px - 50px);
@@ -7,7 +6,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: white;
+}
+
+.title, label {
+  color: #3A4042;
 }
 
 .contact-form {
@@ -17,7 +19,12 @@
   font-size: 30px;
 }
 
-label, button {
+.play-button {
+  background-color: #496076;
+  color: #c2f1db;
+}
+
+label, .play-button {
   margin-top: 20px;
 }
 
@@ -39,27 +46,16 @@ label, button {
   padding-top: 4px;
 }
 
-.contact-form button {
+.contact-form > .play-button {
   height: 60px;
   font-size: 20px;
   margin-bottom: 50px;
-}
-
-.is-error {
-  font-size: 15px;
-  background-color: crimson;
-  border-radius: 10px;
-  padding-left: 10px;
 }
 
 .invalid-btn:hover {
   cursor: not-allowed;
   background-color: #7A1E01;
 }
-
-/* .err {
-  border: solid 5px red;
-} */
 
 .contact-form > input:invalid,
 .contact-form > textarea:invalid {

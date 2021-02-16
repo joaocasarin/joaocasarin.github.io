@@ -1,5 +1,4 @@
 .wrapper {
-  background-color: #87C7BA;
   position: relative;
   min-height: calc(100vh - 80px - 50px);
   display: flex;
@@ -22,12 +21,13 @@
 .name {
   font-family: 'Press Start 2P', cursive;
   margin: 42px 0 28px 0;
-  color: #4070C2;
+  color: #c2f1db;
   font-size: 40px;
 }
 
 .title {
   font-size: 18px;
+  color: #c2f1db;
 }
 
 .buttons {
@@ -46,6 +46,8 @@
   width: 170px;
   margin-right: 20px;
   font-size: 20px;
+  background-color: #496076;
+  color: #c2f1db;
 }
 
 /* resize banner when screen < 750px */

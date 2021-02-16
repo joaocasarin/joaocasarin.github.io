@@ -10,9 +10,6 @@
        name="name"
        [(ngModel)]="name"
        #nameInput="ngModel"
-       [ngClass]="{
-         'err': nameInput.invalid && nameInput.touched
-        }"
        placeholder="João Vitor Casarin"
        required>
 

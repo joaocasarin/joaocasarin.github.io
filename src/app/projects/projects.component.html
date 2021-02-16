@@ -2,17 +2,14 @@
   <h3 class="title">Projects</h3>
 
   <div class="projects">
-    <article class="project"></article>
-    <article class="project"></article>
-    <article class="project"></article>
-    <article class="project"></article>
-    <article class="project"></article>
-    <article class="project"></article>
-    <article class="project"></article>
-    <article class="project"></article>
-    <article class="project"></article>
-    <article class="project"></article>
-    <article class="project"></article>
-    <article class="project"></article>
+    <article class="project" *ngFor="let project of repos">
+      <a class="project-title title" href="{{ project['html_url'] }}" target="_blank">
+        {{ project['name'] }}
+      </a>
+
+      <h3>
+        {{ project['description'] }}
+      </h3>
+    </article>
   </div>
 </section>
