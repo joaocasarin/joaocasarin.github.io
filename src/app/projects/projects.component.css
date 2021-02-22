@@ -22,7 +22,7 @@
 }
 
 .project {
-  background-color: #2F6080;
+  background-color: #496076;
   height: 280px;
   width: 280px;
   margin: 20px;
@@ -30,9 +30,35 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
-.project-title {
-  margin-top: 20px;
-  font-size: 15px;
+.project-logo {
+  width: 80%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 100px;
+  font-family: 'Press Start 2P', cursive;
+  color: #c2f1db;
+  margin-bottom: 20px;
+}
+
+.project-github {
+  transition: 100ms cubic-bezier(.45,.97,.68,2.48);
+}
+
+.project-github:hover {
+  transform: scale(1.08);
+}
+
+@media (max-width: 480px) {
+  .project {
+    width: 220px;
+    height: 220px;
+  }
+  .project-logo {
+    font-size: 80px;
+  }
 }

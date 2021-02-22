@@ -8,7 +8,7 @@ import { retry, catchError } from 'rxjs/operators';
 })
 export class ProjectsService {
 
-  url:string = 'https://api.github.com/users/joaocasarin/repos';
+  url:string = 'https://self-api.herokuapp.com/repos';
 
   constructor(private httpClient: HttpClient) { }
 
