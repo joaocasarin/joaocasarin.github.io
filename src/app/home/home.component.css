@@ -50,6 +50,10 @@
   color: #c2f1db;
 }
 
+.play-button:hover {
+  background-color: #3B755A;
+}
+
 /* resize banner when screen < 750px */
 @media (max-width: 750px) {
   .banner {

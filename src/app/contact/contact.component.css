@@ -24,6 +24,10 @@
   color: #c2f1db;
 }
 
+.play-button:hover {
+  background-color: #3B755A;
+}
+
 label, .play-button {
   margin-top: 20px;
 }
