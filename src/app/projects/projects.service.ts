@@ -3,6 +3,14 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
 
+interface Project {
+  name: string;
+  desription: string;
+  app?: string;
+  github?: string;
+  logo: string;
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -13,8 +21,8 @@ export class ProjectsService {
   constructor(private httpClient: HttpClient) { }
 
   // Obtem todos os carros
-  getProjects() {
-    return this.httpClient.get(this.url).pipe(retry(2), catchError(this.handleError));
+  getProjects() : Observable<Project[]> {
+    return this.httpClient.get<Project[]>(this.url).pipe(retry(2), catchError(this.handleError));
   }
 
   // Manipulação de erros

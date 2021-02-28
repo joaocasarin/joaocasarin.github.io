@@ -30,12 +30,41 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+}
+
+.project-name {
+  font-size: 2rem;
+  color: #c2f1db;
+  margin-bottom: 1rem;
+
+  margin-top: 1rem;
+}
+
+.project-logo {
+  width: 60%;
+  margin-bottom: 1rem;
+}
+
+.project-links {
+  display: flex;
+  width: 60%;
+  justify-content: space-around;
+}
+
+.github:hover, .app:hover {
+  transition: filter 0.2s ease;
+  filter: brightness(0.1);
 }
 
 @media (max-width: 480px) {
   .project {
     width: 220px;
     height: 220px;
+  }
+  .project-name {
+    font-size: 1.5rem;
+  }
+  .project-logo {
+    margin-bottom: 0.5rem;
   }
 }

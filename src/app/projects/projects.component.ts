@@ -15,7 +15,6 @@ export class ProjectsComponent implements OnInit {
     this.getProjects();
   }
 
-  // Chama o serviço para obtém todos os carros
   getProjects() {
     this.projectsService.getProjects().subscribe((projects: []) => {
       this.projects = projects;
