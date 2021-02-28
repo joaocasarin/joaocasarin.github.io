@@ -7,22 +7,18 @@ import { ProjectsService } from './projects.service';
   styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent implements OnInit {
-  repos: [];
+  projects: [];
 
-  constructor(private reposService: ProjectsService) { }
+  constructor(private projectsService: ProjectsService) { }
 
   ngOnInit(): void {
-    this.getRepos();
+    this.getProjects();
   }
 
   // Chama o serviço para obtém todos os carros
-  getRepos() {
-    this.reposService.getProjects().subscribe((repos: []) => {
-      this.repos = repos;
+  getProjects() {
+    this.projectsService.getProjects().subscribe((projects: []) => {
+      this.projects = projects;
     });
-  }
-
-  listRepos() {
-    console.log(this.repos);
   }
 }
