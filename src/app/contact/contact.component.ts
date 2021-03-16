@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ContactService } from './contact.service';
 
 @Component({
   selector: 'app-contact',
@@ -6,16 +7,43 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+  loading: boolean = false;
+  submitText: string = 'Send';
+
   name: string;
   email: string;
   message: string;
 
-  constructor() { }
+  constructor(private ContactService: ContactService) { }
 
   ngOnInit(): void {
   }
 
-  submitContact() {
-    console.log(`Hi, my name is ${this.name}, and you can send me '${this.message}' using my e-mail ${this.email}.`)
+  async submitContact() {
+    this.loading = true;
+    this.submitText = 'Sending...';
+
+    this.ContactService.sendMail({
+      email: this.email,
+      subject: `Portfolio Contact - ${this.name}`,
+      message: this.message }).subscribe(() => {
+        window.alert(`E-mail sent successfully!`);
+        this.loading = false;
+        this.submitText = 'Send';
+
+        this.name = '';
+        this.email = '';
+        this.message = '';
+      }, error => {
+        window.alert(`An error occured!\nError: ${error}`);
+        this.loading = false;
+        this.submitText = 'Send';
+
+        this.name = '';
+        this.email = '';
+        this.message = '';
+      });
+
+
   }
 }

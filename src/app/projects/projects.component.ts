@@ -18,6 +18,9 @@ export class ProjectsComponent implements OnInit {
   getProjects() {
     this.projectsService.getProjects().subscribe((projects: []) => {
       this.projects = projects;
+    },
+    error => {
+      window.alert(`Projects could not be retrieved.\nError: ${error}`);
     });
   }
 }

@@ -38,10 +38,10 @@
       <button
        class="play-button"
        type="submit"
-       [disabled]="contactForm.invalid"
+       [disabled]="contactForm.invalid || loading"
        [ngClass]="{
-         'invalid-btn': contactForm.invalid
-        }">Send</button>
+         'invalid-btn': contactForm.invalid || loading
+        }">{{ submitText }}</button>
     </article>
   </form>
 </section>
