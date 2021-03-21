@@ -14,7 +14,7 @@ interface Project {
 })
 export class ProjectsService {
 
-  url: string = 'https://self-api.herokuapp.com/projects';
+  url: string = 'https://ms-sapi-github.herokuapp.com/projects';
 
   constructor(private httpClient: HttpClient) { }
 
